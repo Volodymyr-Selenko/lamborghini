@@ -125,6 +125,7 @@ body {
 }
 
 .promo__arrow {
+  cursor: pointer;
   margin-top: auto;
   margin-bottom: 30px;
   align-self: center;
@@ -552,7 +553,7 @@ body {
     justify-content: space-between;
     width: 45px;
     height: 30px;
-    border-color: transparent;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     z-index: 10;
@@ -560,7 +561,7 @@ body {
   .menu-btn span {
     height: 3px;
     width: 100%;
-    border-color: #fff;
+    background-color: #fff;
   }
   .menu-mobile {
     display: none;

@@ -1,5 +1,11 @@
 const menuBtn = document.querySelector(".menu-btn");
 const menuMobile = document.querySelector(".menu-mobile");
+const promoArrowButton = document.querySelector(".promo__arrow");
+const infoBlock = document.querySelector(".info");
+
+promoArrowButton.addEventListener("click", () => {
+  infoBlock.scrollIntoView({ block: "start", behavior: "smooth" });
+});
 
 menuBtn.addEventListener("click", () => {
   menuMobile.classList.toggle("menu--open");
@@ -18,8 +24,8 @@ const swiper = new Swiper(".swiper", {
     768: {
       slidesPerView: 2,
       spaceBetween: 20,
-    }
-  }
+    },
+  },
 });
 
 let map;
