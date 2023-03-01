@@ -1,10 +1,50 @@
 const menuBtn = document.querySelector(".menu-btn");
 const menuMobile = document.querySelector(".menu-mobile");
 const promoArrowButton = document.querySelector(".promo__arrow");
-const infoBlock = document.querySelector(".info");
+
+const navBlock = document.querySelector(".nav");
+
+const menuInfoBtn = document.querySelector(".menu-info");
+const menuTreckBtn = document.querySelector(".menu-treck");
+const menuLamboBtn = document.querySelector(".menu-lambo");
+const menuNewsBtn = document.querySelector(".menu-news");
+const menuTicketBtn = document.querySelector(".menu-ticket");
+const menuWatchBtn = document.querySelector(".menu-watch");
+const menuContactBtn = document.querySelector(".menu-contact");
+
+const infoSection = document.querySelector(".info");
+const trackSection = document.querySelector(".track");
+const evoSection = document.querySelector(".evo");
+const blogSection = document.querySelector(".blog");
+const videoSection = document.querySelector(".evo-white__video");
+const contactSection = document.querySelector(".footer");
+
+const navObjects = [
+  { button: menuInfoBtn, section: infoSection },
+  { button: menuTreckBtn, section: trackSection },
+  { button: menuLamboBtn, section: evoSection },
+  { button: menuNewsBtn, section: blogSection },
+  { button: menuTicketBtn, section: contactSection },
+  { button: menuWatchBtn, section: videoSection },
+  { button: menuContactBtn, section: contactSection },
+];
+
+navBlock.addEventListener("click", (event) => {
+  const eventTarget = event.target;
+  if (!eventTarget.id) {
+    const findedButton = navObjects.find((item) =>
+      eventTarget.contains(item.button)
+    );
+    !!findedButton &&
+      findedButton.section.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
+  }
+});
 
 promoArrowButton.addEventListener("click", () => {
-  infoBlock.scrollIntoView({ block: "start", behavior: "smooth" });
+  infoSection.scrollIntoView({ block: "start", behavior: "smooth" });
 });
 
 menuBtn.addEventListener("click", () => {

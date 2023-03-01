@@ -60,9 +60,15 @@ body {
 }
 
 .menu-list {
+  height: fit-content;
   display: flex;
   gap: 0 40px;
   padding-top: 25px;
+}
+
+.menu-item {
+  width: fit-content;
+  height: fit-content;
 }
 
 .menu-left {
@@ -74,6 +80,7 @@ body {
 }
 
 .menu-link {
+  cursor: pointer;
   color: #363636;
   font-size: 16px;
 }
